@@ -23,6 +23,21 @@ from .url_methods import (
 )
 
 
+def company_outlook(
+    apikey: str, symbol: str
+) -> typing.Optional[typing.Dict]:
+    """
+    Query FMP /company-outlook API
+
+    :param apikey: Your API key.
+    :param symbol: Ticker of Company.
+    :return: A dictionary.
+    """
+    path = f"company-outlook"
+    query_vars = {"apikey": apikey, 'symbol': symbol}
+    return __return_json_v4(path=path, query_vars=query_vars)
+
+
 def company_profile(
     apikey: str, symbol: str
 ) -> typing.Optional[typing.List[typing.Dict]]:

@@ -1,6 +1,6 @@
 import typing
 
-from .url_methods import __return_json_v3, __validate_series_type, __validate_time_delta
+from .url_methods import __return_json_v3, __return_json_v4, __validate_series_type, __validate_time_delta
 
 
 def __quotes(apikey: str, value: str) -> typing.Optional[typing.List[typing.Dict]]:
@@ -93,3 +93,18 @@ def historical_price_full(
     res = __return_json_v3(path=path, query_vars=query_vars)
 
     return res.get("historicalStockList", res.get('historical', None))
+
+
+def general_news(apikey: str, page: typing.Optional[int]=0) -> typing.Optional[typing.List[typing.Dict]]:
+    """
+    Query FMP /forex_news API
+
+    :param apikey: Your API key.
+    :param symbol: Your symbol.
+    :param page: page number.
+    :return: A list of dictionaries.
+    """
+    path = f"forex_news"
+    query_vars = {"apikey": apikey, 'page': page}
+    return __return_json_v4(path, query_vars)
+

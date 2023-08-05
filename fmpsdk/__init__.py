@@ -22,6 +22,7 @@ from .company_valuation import (
     cash_flow_statement,
     cash_flow_statement_as_reported,
     cash_flow_statement_growth,
+    company_outlook,
     company_profile,
     delisted_companies,
     discounted_cash_flow,
@@ -54,11 +55,11 @@ from .company_valuation import (
     stock_screener,
     symbols_list,
 )
-from .cryptocurrencies import available_cryptocurrencies, cryptocurrencies_list
+from .cryptocurrencies import available_cryptocurrencies, cryptocurrencies_list, cryptocurrency_news
 from .etf import available_efts, available_etfs, etf_price_realtime
 from .euronext import available_euronext, euronext_list
-from .forex import available_forex, forex, forex_list
-from .general import historical_chart, historical_price_full, quote
+from .forex import available_forex, forex, forex_list, forex_news
+from .general import historical_chart, historical_price_full, quote, general_news
 from .insider_trading import (
     insider_trading,
     insider_trading_rss_feed,
@@ -113,6 +114,7 @@ __all__ = [
     "quote",
     "historical_chart",
     "historical_price_full",
+    'company_outlook',
     "company_profile",
     "key_executives",
     "search",
@@ -198,9 +200,11 @@ __all__ = [
     "sectors_performance",
     "available_cryptocurrencies",
     "cryptocurrencies_list",
+    "cryptocurrency_news",
     "forex",
     "forex_list",
     "available_forex",
+    "forex_news",
     "historical_survivorship_bias_free_eod",
     "insider_trading",
     "mapper_cik_name",
@@ -213,4 +217,5 @@ __all__ = [
     "senate_trading_symbol",
     "senate_disclosure_rss",
     "senate_disclosure_symbol",
+    "general_news",
 ]

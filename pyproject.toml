@@ -6,7 +6,7 @@ authors = ["Dax Mickelson <dmickelson@zscaler.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 python-dotenv = "*"
 requests = "*"
 
