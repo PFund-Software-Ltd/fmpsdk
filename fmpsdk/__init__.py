@@ -54,6 +54,12 @@ from .company_valuation import (
     stock_news,
     stock_screener,
     symbols_list,
+    revenue_product_segmentation,
+    revenue_geographic_segmentation,
+    share_float,
+    company_notes,
+    financial_scores,
+    owner_earnings,
 )
 from .cryptocurrencies import available_cryptocurrencies, cryptocurrencies_list, cryptocurrency_news
 from .etf import available_efts, available_etfs, etf_price_realtime
@@ -218,4 +224,10 @@ __all__ = [
     "senate_disclosure_rss",
     "senate_disclosure_symbol",
     "general_news",
+    "revenue_product_segmentation",
+    "revenue_geographic_segmentation",
+    "share_float",
+    "company_notes",
+    "financial_scores",
+    "owner_earnings",
 ]
