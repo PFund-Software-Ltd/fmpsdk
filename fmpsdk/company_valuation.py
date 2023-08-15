@@ -607,6 +607,36 @@ def discounted_cash_flow(
     return __return_json_v3(path=path, query_vars=query_vars)
 
 
+def advanced_discounted_cash_flow(
+    apikey: str, symbol: str
+) -> typing.Optional[typing.List[typing.Dict]]:
+    """
+    Query FMP /advanced_discounted_cash_flow/ API.
+
+    :param apikey: Your API key.
+    :param symbol: Company ticker.
+    :return: A list of dictionaries.
+    """
+    path = f"advanced_discounted_cash_flow"
+    query_vars = {"apikey": apikey, 'symbol': symbol}
+    return __return_json_v4(path=path, query_vars=query_vars)
+
+
+def advanced_levered_discounted_cash_flow(
+    apikey: str, symbol: str
+) -> typing.Optional[typing.List[typing.Dict]]:
+    """
+    Query FMP /advanced_levered_discounted_cash_flow/ API.
+
+    :param apikey: Your API key.
+    :param symbol: Company ticker.
+    :return: A list of dictionaries.
+    """
+    path = f"advanced_levered_discounted_cash_flow"
+    query_vars = {"apikey": apikey, 'symbol': symbol}
+    return __return_json_v4(path=path, query_vars=query_vars)
+
+
 def historical_discounted_cash_flow(
     apikey: str,
     symbol: str,
@@ -950,7 +980,7 @@ def stock_peers(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.
 
 def revenue_product_segmentation(apikey: str, symbol: str, structure: str='flat', period: str='annual') -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /revenue-product-segmentation/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
@@ -962,7 +992,7 @@ def revenue_product_segmentation(apikey: str, symbol: str, structure: str='flat'
 
 def revenue_geographic_segmentation(apikey: str, symbol: str, structure: str='flat', period: str='annual') -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /revenue-geographic-segmentation/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
@@ -972,9 +1002,9 @@ def revenue_geographic_segmentation(apikey: str, symbol: str, structure: str='fl
     return __return_json_v4(path=path, query_vars=query_vars)
 
 
-def share_float(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.Dict]]:
+def shares_float(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /shares_float/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
@@ -986,7 +1016,7 @@ def share_float(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.
 
 def company_notes(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /company-notes/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
@@ -998,23 +1028,23 @@ def company_notes(apikey: str, symbol: str) -> typing.Optional[typing.List[typin
 
 def financial_scores(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /score/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
     """
-    path = f"scores"
+    path = f"score"
     query_vars = {"apikey": apikey, "symbol": symbol}
     return __return_json_v4(path=path, query_vars=query_vars)
 
 
 def owner_earnings(apikey: str, symbol: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /stock_peers/ API
+    Query FMP /owner_earnings/ API
     :param apikey: Your API key
     :param symbol: Company ticker
     :return: A list of dictionaries
     """
-    path = f"scores"
+    path = f"owner_earnings"
     query_vars = {"apikey": apikey, "symbol": symbol}
     return __return_json_v4(path=path, query_vars=query_vars)
