@@ -4,38 +4,38 @@ from .settings import DEFAULT_LIMIT
 from .url_methods import __return_json_v3
 
 
-def actives(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
+def most_active(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /actives/ API
+    Query FMP /stock_market/actives/ API
 
     :param apikey: Your API key.
     :return: A list of dictionaries.
     """
-    path = f"actives"
+    path = f"stock_market/actives"
     query_vars = {"apikey": apikey}
     return __return_json_v3(path=path, query_vars=query_vars)
 
 
-def gainers(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
+def most_gainer(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /gainers/ API
+    Query FMP /stock_market/gainers/ API
 
     :param apikey: Your API key.
     :return: A list of dictionaries.
     """
-    path = f"gainers"
+    path = f"stock_market/gainers"
     query_vars = {"apikey": apikey}
     return __return_json_v3(path=path, query_vars=query_vars)
 
 
-def losers(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
+def most_loser(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
     """
-    Query FMP /losers/ API
+    Query FMP /stock_market/losers/ API
 
     :param apikey: Your API key.
     :return: A list of dictionaries.
     """
-    path = f"losers"
+    path = f"stock_market/losers"
     query_vars = {"apikey": apikey}
     return __return_json_v3(path=path, query_vars=query_vars)
 

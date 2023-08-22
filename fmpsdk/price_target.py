@@ -5,7 +5,7 @@ from .url_methods import __return_json_v3, __return_json_v4
 
 
 
-def price_target(apikey: str, symbol: str) -> list[dict]:
+def price_target_details(apikey: str, symbol: str) -> list[dict]:
     """
     Query FMP /price-target API
 

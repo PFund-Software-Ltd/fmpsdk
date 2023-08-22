@@ -104,7 +104,14 @@ from .senate import (
     senate_trading_rss,
     senate_trading_symbol,
 )
-from .stock_market import actives, gainers, losers, market_hours, sectors_performance, historical_sectors_performance
+from .market_performance import (
+    most_active, 
+    most_gainer, 
+    most_loser, 
+    market_hours, 
+    sectors_performance, 
+    historical_sectors_performance
+)
 from .stock_time_series import (
     exchange_realtime,
     historical_stock_dividend,
@@ -116,7 +123,7 @@ from .technical_indicators import technical_indicators
 from .tsx import available_tsx, tsx_list
 from .economics import economic_indicator
 from .price_target import (
-    price_target, 
+    price_target_details,
     price_target_summary, 
     price_target_consensus,
 )
@@ -213,9 +220,9 @@ __all__ = [
     "euronext_list",
     "available_tsx",
     "tsx_list",
-    "actives",
-    "gainers",
-    "losers",
+    "most_active",
+    "most_gainer",
+    "most_loser",
     "market_hours",
     "sectors_performance",
     "historical_sectors_performance",
@@ -246,7 +253,7 @@ __all__ = [
     "financial_scores",
     "owner_earnings",
     "economic_indicator",
-    'price_target', 
+    'price_target_details', 
     'price_target_summary',
     'price_target_consensus',
     'upgrades_downgrades',
