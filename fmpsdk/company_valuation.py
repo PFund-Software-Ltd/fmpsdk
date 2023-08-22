@@ -850,7 +850,7 @@ def delisted_companies(
 
 def stock_news(
     apikey: str,
-    tickers: typing.Union[str, typing.List] = "",
+    tickers: typing.Union[str, typing.List],
     limit: int = DEFAULT_LIMIT,
 ) -> typing.Optional[typing.List[typing.Dict]]:
     """

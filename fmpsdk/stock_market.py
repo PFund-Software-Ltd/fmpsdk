@@ -52,9 +52,7 @@ def market_hours(apikey: str) -> typing.Optional[typing.List[typing.Dict]]:
     return __return_json_v3(path=path, query_vars=query_vars)
 
 
-def sectors_performance(
-    apikey: str, limit: int = DEFAULT_LIMIT
-) -> typing.Optional[typing.List[typing.Dict]]:
+def sectors_performance(apikey: str, limit: int = DEFAULT_LIMIT) -> list[dict]:
     """
     Query FMP /sectors_performance/ API
 
@@ -63,5 +61,18 @@ def sectors_performance(
     :return: A list of dictionaries.
     """
     path = f"sectors-performance"
+    query_vars = {"apikey": apikey, "limit": limit}
+    return __return_json_v3(path=path, query_vars=query_vars)
+
+
+def historical_sectors_performance(apikey: str, limit: int = DEFAULT_LIMIT) -> list[dict]:
+    """
+    Query FMP /historical-sectors-performance/ API
+
+    :param apikey: Your API key.
+    :param limit: Number of rows to return
+    :return: A list of dictionaries.
+    """
+    path = f"historical-sectors-performance"
     query_vars = {"apikey": apikey, "limit": limit}
     return __return_json_v3(path=path, query_vars=query_vars)
