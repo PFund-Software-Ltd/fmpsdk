@@ -114,6 +114,7 @@ from .stock_time_series import (
 )
 from .technical_indicators import technical_indicators
 from .tsx import available_tsx, tsx_list
+from .economics import economic_indicator
 
 attribution: str = "Data provided by Financial Modeling Prep"
 logging.info(attribution)
@@ -234,4 +235,5 @@ __all__ = [
     "company_notes",
     "financial_scores",
     "owner_earnings",
+    "economic_indicator",
 ]

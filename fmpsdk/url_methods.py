@@ -84,6 +84,7 @@ def __return_json_v4(
         response = requests.get(
             url, params=query_vars, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT)
         )
+        
         if len(response.content) > 0:
             return_var = response.json()
 
