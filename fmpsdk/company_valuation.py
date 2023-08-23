@@ -870,21 +870,6 @@ def stock_news(
     return __return_json_v3(path=path, query_vars=query_vars)
 
 
-def earnings_surprises(
-    apikey: str, symbol: str
-) -> typing.Optional[typing.List[typing.Dict]]:
-    """
-    Query FMP /earnings-surprises/ API.
-
-    :param apikey: Your API key.
-    :param symbol: Company ticker.
-    :return: A list of dictionaries.
-    """
-    path = f"earnings-surprises/{symbol}"
-    query_vars = {"apikey": apikey}
-    return __return_json_v3(path=path, query_vars=query_vars)
-
-
 def earning_call_transcript(
     apikey: str, symbol: str, year: int, quarter: int
 ) -> typing.Optional[typing.List[typing.Dict]]:

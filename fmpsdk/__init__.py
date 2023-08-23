@@ -28,7 +28,6 @@ from .company_valuation import (
     discounted_cash_flow,
     advanced_discounted_cash_flow,
     advanced_levered_discounted_cash_flow,
-    earnings_surprises,
     enterprise_values,
     etf_list,
     financial_growth,
@@ -130,6 +129,7 @@ from .price_target import (
 from .upgrades_and_downgrades import upgrades_downgrades, upgrades_downgrades_consensus
 from .stock_price import stock_price_change
 from .company_information import symbol_change
+from .stock_statistics import historical_social_sentiment, stock_grade, earnings_surprises
 
 
 attribution: str = "Data provided by Financial Modeling Prep"
@@ -260,4 +260,6 @@ __all__ = [
     'upgrades_downgrades_consensus',
     'stock_price_change',
     'symbol_change',
+    "historical_social_sentiment",
+    'stock_grade',
 ]
