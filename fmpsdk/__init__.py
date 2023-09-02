@@ -132,8 +132,8 @@ from .company_information import symbol_change
 from .stock_statistics import historical_social_sentiment, stock_grade, earnings_surprises
 
 
-attribution: str = "Data provided by Financial Modeling Prep"
-logging.info(attribution)
+# attribution: str = "Data provided by Financial Modeling Prep"
+# logging.info(attribution)
 
 __all__ = [
     "quote",
