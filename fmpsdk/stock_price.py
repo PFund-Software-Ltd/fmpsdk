@@ -1,4 +1,4 @@
-from .url_methods import __return_json_v4
+from .url_methods import __return_json_v3
 
 
 def stock_price_change(apikey: str, tickers: str | list) -> list[dict]:
@@ -15,5 +15,5 @@ def stock_price_change(apikey: str, tickers: str | list) -> list[dict]:
     tickers = ",".join(tickers)
     path += tickers
     query_vars = {"apikey": apikey}
-    return __return_json_v4(path=path, query_vars=query_vars)
+    return __return_json_v3(path=path, query_vars=query_vars)
 
