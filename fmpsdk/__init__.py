@@ -127,7 +127,7 @@ from .price_target import (
     price_target_consensus,
 )
 from .upgrades_and_downgrades import upgrades_downgrades, upgrades_downgrades_consensus
-from .stock_price import stock_price_change
+from .stock_price import stock_price_change, historical_daily_price_last_x_days
 from .company_information import symbol_change
 from .stock_statistics import historical_social_sentiment, stock_grade, earnings_surprises
 
@@ -259,6 +259,7 @@ __all__ = [
     'upgrades_downgrades',
     'upgrades_downgrades_consensus',
     'stock_price_change',
+    "historical_daily_price_last_x_days",
     'symbol_change',
     "historical_social_sentiment",
     'stock_grade',
